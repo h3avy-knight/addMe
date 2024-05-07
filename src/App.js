@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Header from "./assets/manuel-cosentino-n--CMLApjfI-unsplash.jpg";
+import { Carousel } from "./components/Carousel";
+import Pagination from "./components/Pagination";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <div className="h-[100vh] mt-5">
+        <img src={Header} alt="" className="h-[100%] w-[100%]" />
+      </div>
+      <div>
+        <Carousel />
+      </div>
+      <div>{/* <Pagination /> */}</div>
     </div>
   );
 }
